@@ -1,0 +1,21 @@
+<div class="pets">
+	<div ng-if="$ctrl.errorMsg" class="error-msg">{{$ctrl.errorMsg}}</div>
+	<div class="item-container" ng-repeat="pet in ::$ctrl.pets">
+		<div class="item">
+			<div class="side">
+				<div class="image-wrap">
+					<img ng-src="/images/{{::pet.photoUrls[0]}}">
+				</div>
+			</div>
+
+			<div class="side back">
+				<div class="small-image">
+					<img ng-src="/images/{{::pet.photoUrls[0]}}">
+				</div>
+				<div>Name   : {{::pet.name}}</div>
+				<div>Status :{{::pet.status}}</div>
+				<div><a ng-link="['PetDetail',{id : {{pet.id}} }]">More Detail</a></div>
+			</div>
+		</div>
+	</div>
+</div>

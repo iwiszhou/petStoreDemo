@@ -1,0 +1,87 @@
+$red-error : #d9534f;
+$success-green: green;
+$background-purple: #240d49;
+$font-gray: #aaa;
+$btn-purple: #8869b8;
+
+body {
+  padding: 0;
+  background-color: #fafafa;
+  .container-fluid{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.error-msg{
+  color: $red-error;
+}
+
+.warn-msg{
+  color: #f0ad4e;
+}
+
+.btn{
+	border: 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/** Custom default input style **/
+.custom-input{
+  box-shadow: none;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 100;
+  
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  margin-bottom: 10px;
+  &:focus{
+    border-color: none;
+    box-shadow: none;
+  }
+}
+
+/** Custom default button style **/
+.default-btn{
+  background: rgba(0,133,215,0.6);
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 3px 0px 0px #0085d7;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 100;
+  padding: 10px 15px;
+  margin-bottom: 3px;
+  border: none;
+  cursor: pointer;
+  font: 300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+
+  &:active{
+    outline: none;
+    margin-top: 2px;
+    box-shadow: 0 1px 0px 0px #0085d7;
+    margin-bottom: 1px;
+  }
+  &:focus{
+    outline: none;
+  }
+  &[disabled]{
+    background: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+    box-shadow: 0 3px 0px 0px rgba(0,0,0,0.1);
+  }
+  .loadingSpinner{
+    position: relative;
+    float: right;
+    margin-left: 45px;
+    i{
+      color: black;
+      margin-left: 5px;
+    }
+  }
+}

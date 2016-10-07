@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <base href="/">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/all.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body ng-app="petStoreApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <growl-notifications></growl-notifications>
+    <app></app>
+    
+    <div id="full-screen-spinner">
+      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+      </div>
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/babel-polyfill/browser-polyfill.js"></script>
+    <script src="bower_components/angular-growl-notifications/dist/angular-growl-notifications.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/lib/angular_1_router.js"></script>
+
+        <script src="scripts/app.js"></script>
+        
+        <script src="scripts/config.js"></script>
+
+        <script src="scripts/main/main.js"></script>
+
+        <script src="scripts/pets/pets.component.js"></script>
+        
+        <script src="scripts/petDetail/petDetail.component.js"></script>
+        
+        <script src="scripts/createPet/createPet.component.js"></script>
+
+        <script src="scripts/menuBar/menuBar.component.js"></script>
+
+        <script src="scripts/footer/footer.component.js"></script>
+
+        <script src="scripts/shared/utils.service.js"></script>
+
+        <script src="scripts/shared/apis.service.js"></script>
+
+        <script src="scripts/shared/constants.js"></script>
+
+        <script src="scripts/shared/carousel/carousel.component.js"></script>
+
+        <!-- endbuild -->
+</body>
+</html>

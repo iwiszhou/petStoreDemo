@@ -1,0 +1,68 @@
+<div class="pet-detail">
+	<div ng-if="$ctrl.successMsg" class="alert alert-success">{{$ctrl.successMsg}} {{$ctrl.countDown}}s</div>
+
+	<div ng-if="$ctrl.errorMsg" class="error-msg text-center">{{$ctrl.errorMsg}}</div>
+
+	<div ng-if="!$ctrl.successMsg && !$ctrl.errorMsg">
+		<!--Hack to show cool carousle component - only for 5 images !!! -->
+		<div class="images" ng-if="$ctrl.pet.photoUrls.length!=5">
+			<div class="image" ng-repeat="image in ::$ctrl.pet.photoUrls track by $index">
+				<img ng-src="/images/{{::image}}">
+			</div>
+		</div>
+		<div ng-if="$ctrl.pet.photoUrls.length == 5">
+			<custom-carousel images="$ctrl.pet.photoUrls"></custom-carousel>
+		</div>
+
+		<div class="details">
+			<div class="detail-row">
+				<div class="left">
+					ID
+				</div>
+				<div class="right">
+					{{::$ctrl.pet.id}}
+				</div>
+			</div>
+
+			<div class="detail-row">
+				<div class="left">
+					Name
+				</div>
+				<div class="right">
+					{{::$ctrl.pet.name}}
+				</div>
+			</div>
+
+			<div class="detail-row">
+				<div class="left">
+					Category
+				</div>
+				<div class="right">
+					{{::$ctrl.pet.category.name}}
+				</div>
+			</div>
+
+			<div class="detail-row">
+				<div class="left">
+					Status
+				</div>
+				<div class="right">
+					<span class="status" ng-class="{ 'btn-success' : $ctrl.pet.status==='available' , 'btn-warning' : $ctrl.pet.status==='pending' , 'btn-danger' : $ctrl.pet.status==='sold' }">{{::$ctrl.pet.status}}</span>
+				</div>
+			</div>
+
+			<div class="detail-row">
+				<div class="left">
+					Tags
+				</div>
+				<div class="right">
+					<span class="tag" ng-repeat="tag in $ctrl.pet.tags">{{:: tag.name}}</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="btns text-center">
+			<button class="default-btn" ng-click="$ctrl.deletePet($ctrl.pet.id)">Delete</button>
+		</div>
+	</div>
+</div>

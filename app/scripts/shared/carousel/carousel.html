@@ -1,0 +1,17 @@
+<div class="custom-carousel">
+	<div class="carousel-container">
+		<div id="carousel" ng-style="$ctrl.carouselStyle">
+			<figure ng-repeat=" i in ::$ctrl.images"><img ng-src="/images/{{i}}"></figure>
+		</div>
+	</div>
+	<div class="text-center">
+		<span ng-click="$ctrl.nextImage()">
+			<i class="fa fa-arrow-left" aria-hidden="true"></i>
+		</span>
+		<span>&nbsp;</span>
+		<span ng-click="$ctrl.previousImage()">
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>
+		</span>
+			
+	</div>
+</div>
